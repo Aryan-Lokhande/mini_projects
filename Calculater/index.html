@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/image/calculator.png" style="height: 16px;width: 16px;">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+      <div id="calculator">
+        <input type="text" id="screen" placeholder="0" readonly>
+        <hr style="margin-top: 20px; margin-bottom: 2px;">
+        <div>
+          <button class="button op" onclick="clearDisplay('AC')">AC</button>
+          <button class="button op" onclick="clearDisplay('DEL')">DEL</button>
+          <button class="button op" onclick="appendToDisplay('%')">%</button>
+          <button class="button op" onclick="appendToDisplay('/')">/</button>
+        </div>
+        
+        <div>
+          <button class = 'button' onclick="appendToDisplay('7')">7</button>
+          <button class = 'button' onclick="appendToDisplay('8')">8</button>
+          <button class = 'button' onclick="appendToDisplay('9')">9</button>
+          <button class = 'button op' onclick="appendToDisplay('*')">x</button>
+        </div> 
+
+        <div>
+          <button class="button" onclick="appendToDisplay('4')">4</button>
+          <button class="button" onclick="appendToDisplay('5')">5</button>
+          <button class="button" onclick="appendToDisplay('6')">6</button>
+          <button class="button op" onclick="appendToDisplay('+')">+</button>
+        </div>
+        
+        <div>
+          <button class="button" onclick="appendToDisplay('1')">1</button>
+          <button class="button" onclick="appendToDisplay('2')">2</button>
+          <button class="button" onclick="appendToDisplay('3')">3</button>
+          <button class="button op" onclick="appendToDisplay('-')">-</button>
+        </div>
+
+        <div>
+          <button class="button" onclick="appendToDisplay('0')">0</button>
+          <button class="button" onclick="appendToDisplay('.')">.</button>
+          <button class="button eq" onclick="square()">x<sup>2</sup></button>
+          <button class="button eq" onclick="claculate()" >=</button>
+        </div>
+
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
