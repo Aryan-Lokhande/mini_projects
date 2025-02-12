@@ -1,56 +1,109 @@
-body{
-    text-align: center;
-    background: linear-gradient(4deg, #CDC1FF, #F5F0CD);
-    /* background-color: #CDC1FF; */
-    height: 100vh;
-    /* color: chocolate; */
+/* General Styles */
+body {
+  text-align: center;
+  background: linear-gradient(4deg, #cdc1ff, #f5f0cd);
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.btn{
+/* Button Styles */
+.btn {
+  height: 150px;
+  width: 150px;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+/* Start Button */
+#start-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff0000, #fffb00);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+#start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#start-btn:active {
+  transform: scale(0.95);
+}
+
+/* Container for Game */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 310px; /* Ensure the width fits perfectly */
+  margin: 30px auto;
+}
+
+/* Color Styles with Circular Layout */
+.green {
+  border-top-left-radius: 100%;
+  background-color: #36ba98;
+}
+
+.red {
+  border-bottom-left-radius: 100%;
+  background-color: #e4003a;
+}
+
+.orange {
+  background-color: #fc8f54;
+  border-top-right-radius: 100%;
+}
+
+.purple {
+  border-bottom-right-radius: 100%;
+  background-color: #6d67e4;
+}
+
+/* Flash Effects */
+.flash {
+  background-color: antiquewhite;
+}
+
+.uflash {
+  background-color: #11ff00;
+}
+
+/* Game Over Effect */
+.wrong {
+  background-color: #ff2929;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .btn {
+    height: 200px;
+    width: 200px;
+  }
+  .container {
+    width: 410px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
     height: 250px;
-    width:  250px;
-    border: 4px solid black;
-    font-size: x-large;
-    /* border-radius: 18px; */
-    /* margin: 2rem; */
-    /* margin: 20px; */
-    align-content: center;
-}
-
-
-.wrong{
-    background-color: #FF2929;
-}
-
-.container{ 
-    display: flex;
-    justify-content: center;
-}
-
-.green{
-    border-top-left-radius: 99%;
-    background-color: #36BA98;
-}
-
-.red{
-    border-bottom-left-radius: 99%;
-    background-color: #E4003A;
-}
-
-.orange{
-    background-color: #FC8F54;
-    border-top-right-radius: 99%;
-}
-
-.purple{
-    border-bottom-right-radius: 99%;
-    background-color: #6D67E4;
-    /* color: purple; */
-}
-
-.flash{
-    background-color: antiquewhite;
-}
-.uflash{
-    background-color: #11ff00;
+    width: 250px;
+  }
+  .container {
+    width: 510px;
+  }
 }
